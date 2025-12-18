@@ -1,0 +1,68 @@
+.header {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    /* Default text color in light/dark mode */
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navLink {
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.navLink:hover {
+    color: var(--secondary);
+}
+
+.ctaButton {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.ctaButton:hover {
+    background-color: #0284c7;
+    /* Darker Sky */
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        /* simple mobile hide for now, or use hamburger if needed */
+    }
+}
