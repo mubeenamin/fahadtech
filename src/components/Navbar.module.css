@@ -20,6 +20,7 @@
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--foreground);
     /* Default text color in light/dark mode */
     text-decoration: none;
     letter-spacing: -0.02em;

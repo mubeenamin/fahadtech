@@ -6,7 +6,7 @@
 
 .title {
     font-size: 3rem;
-    color: var(--white);
+    color: var(--foreground);
     margin-bottom: 1.5rem;
     font-weight: 800;
 }
@@ -22,7 +22,7 @@
 }
 
 .section h2 {
-    color: var(--white);
+    color: var(--foreground);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -58,24 +58,23 @@
 }
 
 .cta {
-    background-color: var(--card-bg);
+    background-color: var(--surface);
     color: var(--foreground);
     padding: 3rem;
     border-radius: 12px;
     text-align: center;
     margin-top: 4rem;
     border: 1px solid var(--primary);
-    /* Gold border is acceptable as highlight */
 }
 
 .cta h3 {
-    color: var(--white);
+    color: var(--foreground);
     margin-bottom: 1rem;
     font-size: 1.75rem;
 }
 
 .cta p {
-    color: #cbd5e1;
+    color: var(--muted);
     margin-bottom: 2rem;
 }
 

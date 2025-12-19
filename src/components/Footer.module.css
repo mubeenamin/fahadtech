@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--section-bg);
-    color: var(--white);
+    color: var(--foreground);
     padding: 4rem 0 2rem;
     margin-top: auto;
     border-top: 1px solid var(--border);
@@ -16,14 +16,15 @@
 }
 
 .column h3 {
-    color: var(--white);
+    color: var(--foreground);
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
 .column p {
-    color: #cbd5e1;
+    color: var(--muted);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -37,7 +38,7 @@
 }
 
 .link {
-    color: #cbd5e1;
+    color: var(--muted);
     font-size: 0.95rem;
     transition: color 0.2s;
 }
@@ -48,9 +49,9 @@
 
 .copyright {
     text-align: center;
-    border-top: 1px solid #334155;
+    border-top: 1px solid var(--border);
     margin-top: 3rem;
     padding-top: 2rem;
-    color: #94a3b8;
+    color: var(--muted);
     font-size: 0.875rem;
 }

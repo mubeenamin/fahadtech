@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -44,6 +45,9 @@ export default function Navbar() {
             <Link href="/contact" className={styles.ctaButton} onClick={() => setIsOpen(false)}>
               Contact Us
             </Link>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center' }}>
+            <ThemeToggle />
           </li>
         </ul>
       </nav>

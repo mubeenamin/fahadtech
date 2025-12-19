@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Manrope, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationController from "@/components/AnimationController";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const manrope = Manrope({ subsets: ["latin"], variable: '--font-manrope' });
 const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} font-sans`}>
+      <body className={`${manrope.variable} ${outfit.variable} font-sans`}>
         <Navbar />
         <main style={{ minHeight: '80vh' }}>
           {children}

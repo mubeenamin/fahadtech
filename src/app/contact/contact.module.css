@@ -11,7 +11,7 @@
 
 .title {
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--foreground);
     margin-bottom: 1rem;
     font-weight: 800;
 }
@@ -42,7 +42,7 @@
 }
 
 .infoTitle {
-    color: var(--white);
+    color: var(--foreground);
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -66,7 +66,7 @@
 .label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--white);
+    color: var(--foreground);
     font-weight: 500;
 }
 
@@ -77,7 +77,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     background-color: var(--background);
-    color: var(--white);
+    color: var(--foreground);
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

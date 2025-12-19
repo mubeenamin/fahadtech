@@ -40,23 +40,39 @@
   --warning: var(--status-recording);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #FBF7ED;
-    --surface: #FFFFFF;
-    --card-bg: #FFFFFF;
-    --border: #E6D8B8;
+[data-theme='light'] {
+  --background: #FBF7ED;
+  --surface: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --border: #E6D8B8;
 
-    --foreground: #3B0F06;
-    --muted: #6B4A2A;
+  --foreground: #3B0F06;
+  --muted: #6B4A2A;
 
-    --primary: #C9A34E;
-    --primary-hover: #8C6A2F;
-    --secondary-btn: #E6D8B8;
+  --primary: #C9A34E;
+  --primary-hover: #8C6A2F;
+  --secondary-btn: #E6D8B8;
 
-    --white: #FFFFFF;
-    --section-bg: #FBF7ED;
-  }
+  --white: #FFFFFF;
+  --section-bg: #F4EFE0;
+}
+
+[data-theme='dark'] {
+  --background: var(--bg-main);
+  --surface: var(--bg-panel);
+  --card-bg: var(--bg-panel);
+  --section-bg: var(--bg-panel);
+  --elevated: var(--bg-panel);
+  --border: var(--bg-border);
+
+  --primary: var(--action-primary);
+  --primary-hover: var(--action-hover);
+  --secondary: var(--action-primary);
+  --secondary-btn: var(--bg-border);
+
+  --foreground: var(--text-primary);
+  --muted: var(--text-secondary);
+  --white: var(--text-primary);
 }
 
 /* Enforce dark scheme styles */
@@ -75,7 +91,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: inherit;
+  font-family: var(--font-manrope), sans-serif;
   line-height: 1.6;
 }
 
