@@ -41,7 +41,7 @@
 }
 
 [data-theme='light'] {
-  --background: #FBF7ED;
+  --background: #FFFFFF;
   --surface: #FFFFFF;
   --card-bg: #FFFFFF;
   --border: #E6D8B8;
@@ -54,7 +54,7 @@
   --secondary-btn: #E6D8B8;
 
   --white: #FFFFFF;
-  --section-bg: #F4EFE0;
+  --section-bg: #FFFFFF;
 }
 
 [data-theme='dark'] {
@@ -86,6 +86,8 @@ body {
   overflow-x: hidden;
   background-color: var(--background);
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -122,7 +124,7 @@ img {
 }
 
 .container {
-  padding: 0 1.5rem;
+  padding: 0;
 }
 
 /* Animations */

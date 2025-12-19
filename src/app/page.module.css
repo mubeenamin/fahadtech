@@ -64,14 +64,34 @@
 }
 
 .section {
-  padding: 6rem 1.5rem;
-  background: linear-gradient(180deg, var(--background) 0%, var(--surface) 100%);
+  padding: 6rem 0;
+  background-color: var(--background);
   border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.section .sectionTitle {
+  background: linear-gradient(135deg, var(--foreground) 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.section .card {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.section .cardTitle {
+  color: var(--foreground);
+}
+
+.section .cardText {
+  color: var(--muted);
 }
 
 .sectionAlt {
   background-color: var(--section-bg);
-  padding: 6rem 1.5rem;
+  padding: 6rem 0;
 }
 
 .sectionTitle {
@@ -96,8 +116,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .card {
