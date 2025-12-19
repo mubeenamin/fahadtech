@@ -9,9 +9,9 @@ export default function Home() {
       <HeroSlider />
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Our Core Services</h2>
+        <h2 className={`${styles.sectionTitle} animate-on-scroll fade-in-up`}>Our Core Services</h2>
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <div className={`${styles.card} animate-on-scroll fade-in-up delay-100`}>
             <div className={styles.cardIcon}>📹</div>
             <h3 className={styles.cardTitle}>Surveillance Systems</h3>
             <p className={styles.cardText}>
@@ -21,7 +21,7 @@ export default function Home() {
               Learn more &rarr;
             </Link>
           </div>
-          <div className={styles.card}>
+          <div className={`${styles.card} animate-on-scroll fade-in-up delay-200`}>
             <div className={styles.cardIcon}>🌐</div>
             <h3 className={styles.cardTitle}>Network Equipment</h3>
             <p className={styles.cardText}>
@@ -31,7 +31,7 @@ export default function Home() {
               Learn more &rarr;
             </Link>
           </div>
-          <div className={styles.card}>
+          <div className={`${styles.card} animate-on-scroll fade-in-up delay-300`}>
             <div className={styles.cardIcon}>🛠️</div>
             <h3 className={styles.cardTitle}>Professional Installation</h3>
             <p className={styles.cardText}>
@@ -45,19 +45,19 @@ export default function Home() {
       </section>
 
       <section className={styles.sectionAlt}>
-        <h2 className={styles.sectionTitle}>Why Choose Fahad Technologies?</h2>
+        <h2 className={`${styles.sectionTitle} animate-on-scroll fade-in-up`}>Why Choose Fahad Technologies?</h2>
         <div className={styles.grid}>
-          <div className={styles.featureItem}>
+          <div className={`${styles.featureItem} animate-on-scroll scale-in delay-100`}>
             <div className={styles.featureIcon}>✓</div>
             <h3>Expert Technicians</h3>
             <p>Our team is fully trained and experienced in the latest security and networking standards.</p>
           </div>
-          <div className={styles.featureItem}>
+          <div className={`${styles.featureItem} animate-on-scroll scale-in delay-200`}>
             <div className={styles.featureIcon}>⚡</div>
             <h3>Latest Technology</h3>
             <p>We supply only the most reliable and advanced equipment from top-tier manufacturers.</p>
           </div>
-          <div className={styles.featureItem}>
+          <div className={`${styles.featureItem} animate-on-scroll scale-in delay-300`}>
             <div className={styles.featureIcon}>🤝</div>
             <h3>Dedicated Support</h3>
             <p>We don't just sell; we support. Reliable after-sales service and maintenance contracts.</p>
@@ -65,7 +65,9 @@ export default function Home() {
         </div>
       </section>
 
-      <BrandMarquee />
+      <div className="animate-on-scroll fade-in-up delay-200">
+        <BrandMarquee />
+      </div>
     </div>
   );
 }
