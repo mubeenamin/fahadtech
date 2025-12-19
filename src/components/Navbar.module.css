@@ -6,7 +6,6 @@
     z-index: 100;
     padding: 1rem 0;
     backdrop-filter: blur(10px);
-    /* Add blur for effect */
 }
 
 .navContainer {
@@ -22,9 +21,10 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--foreground);
-    /* Default text color in light/dark mode */
     text-decoration: none;
     letter-spacing: -0.02em;
+    z-index: 102;
+    /* Ensure logo stays above mobile menu if we want, or menu covers it. Let's keep it visible or rely on menu z-index */
 }
 
 .logo span {
@@ -35,12 +35,15 @@
     display: flex;
     gap: 2rem;
     list-style: none;
+    align-items: center;
 }
 
 .navLink {
     font-weight: 500;
     color: var(--muted);
     font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .navLink:hover {
@@ -55,15 +58,73 @@
     font-weight: 600;
     font-size: 0.9rem;
     transition: background-color 0.2s;
+    text-decoration: none;
 }
 
 .ctaButton:hover {
     background-color: var(--primary-hover);
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--foreground);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 102;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .navLinks {
-        display: none;
-        /* simple mobile hide for now, or use hamburger if needed */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background-color: var(--background);
+        border-left: 1px solid var(--border);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 101;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+
+    .navLinks.open {
+        right: 0;
+    }
+
+    .navLink {
+        font-size: 1.1rem;
     }
 }
