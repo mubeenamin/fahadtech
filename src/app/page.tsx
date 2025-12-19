@@ -1,28 +1,12 @@
 import Link from 'next/link';
 import styles from "./page.module.css";
+import HeroSlider from "@/components/HeroSlider";
+import BrandMarquee from "@/components/BrandMarquee";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className="container">
-          <h1 className={styles.heroTitle}>
-            Secure Your Assets.<br />
-            Connect Your World.
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Fahad Technologies provides state-of-the-art CCTV surveillance systems and robust networking solutions tailored for your business and home.
-          </p>
-          <div className={styles.ctaContainer}>
-            <Link href="/services/cctv" className={styles.primaryButton}>
-              Explore CCTV Solutions
-            </Link>
-            <Link href="/contact" className={styles.secondaryButton}>
-              Get a Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Our Core Services</h2>
@@ -80,6 +64,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BrandMarquee />
     </div>
   );
 }

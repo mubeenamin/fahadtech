@@ -5,6 +5,8 @@
     top: 0;
     z-index: 100;
     padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    /* Add blur for effect */
 }
 
 .navContainer {
@@ -46,7 +48,7 @@
 }
 
 .ctaButton {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--white);
     padding: 0.5rem 1.25rem;
     border-radius: 6px;
@@ -56,8 +58,7 @@
 }
 
 .ctaButton:hover {
-    background-color: #0284c7;
-    /* Darker Sky */
+    background-color: var(--primary-hover);
 }
 
 @media (max-width: 768px) {

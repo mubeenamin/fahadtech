@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageHeader from '@/components/PageHeader';
 import styles from "../services.module.css";
 import { Metadata } from 'next';
 
@@ -7,68 +8,73 @@ export const metadata: Metadata = {
     description: "Professional networking equipment sales and installation.",
 };
 
+
+
 export default function NetworkingPage() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Network Equipment & Installation</h1>
-            <p className={styles.lead}>
-                Build a reliable, high-speed network infrastructure that powers your business operations.
-            </p>
+        <div>
+            <PageHeader
+                title="Enterprise Network Infrastructure & Architecture"
+                subtitle="Engineered connectivity solutions for mission-critical data transport and high-availability operations."
+                backgroundImage="/hero-slider/networking.png"
+            />
+            <div className={styles.container}>
 
-            <section className={styles.section}>
-                <h2>Robust Connectivity Solutions</h2>
-                <p>
-                    In the digital age, a fast and stable network is the backbone of any organization. Fahad Technologies specializes in the supply and installation of top-tier networking equipment. We design networks that are scalable, secure, and built to handle the demands of modern data traffic.
-                </p>
-            </section>
+                <section className={styles.section}>
+                    <h2>High-Performance Data Environments</h2>
+                    <p>
+                        In an era defined by digital velocity, your network infrastructure dictates your operational tempo. Fahad Technologies delivers carrier-grade networking solutions, designed for resilience, scalability, and zero-latency performance. We build the digital highways that drive modern commerce.
+                    </p>
+                </section>
 
-            <section className={styles.section}>
-                <h2>Our Networking Capabilities</h2>
-                <ul className={styles.list}>
-                    <li className={styles.listItem}>
-                        <span className={styles.check}>✓</span>
-                        <div>
-                            <strong>Structured Cabling</strong>
-                            <p>CAT6/CAT6A and Fiber Optic cabling services.</p>
-                        </div>
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.check}>✓</span>
-                        <div>
-                            <strong>Routers & Switches</strong>
-                            <p>Installation and configuration of enterprise-grade hardware.</p>
-                        </div>
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.check}>✓</span>
-                        <div>
-                            <strong>Wi-Fi Solutions</strong>
-                            <p>Access point deployment for seamless wireless coverage.</p>
-                        </div>
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.check}>✓</span>
-                        <div>
-                            <strong>Server Rack Management</strong>
-                            <p>Clean and organized server room setups.</p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+                <section className={styles.section}>
+                    <h2>Infrastructure Services</h2>
+                    <ul className={styles.list}>
+                        <li className={styles.listItem}>
+                            <span className={styles.check}>✓</span>
+                            <div>
+                                <strong>Structured Cabling Standards</strong>
+                                <p>Certified CAT6/CAT7 and Fiber Optic backbones compliant with TIA/EIA standards.</p>
+                            </div>
+                        </li>
+                        <li className={styles.listItem}>
+                            <span className={styles.check}>✓</span>
+                            <div>
+                                <strong>Core Switching & Routing</strong>
+                                <p>Deployment of managed enterprise switching fabrics and edge routing for optimized traffic shaping.</p>
+                            </div>
+                        </li>
+                        <li className={styles.listItem}>
+                            <span className={styles.check}>✓</span>
+                            <div>
+                                <strong>High-Density Wireless</strong>
+                                <p>Enterprise Wi-Fi 6/6E deployment for saturated environments and seamless roaming.</p>
+                            </div>
+                        </li>
+                        <li className={styles.listItem}>
+                            <span className={styles.check}>✓</span>
+                            <div>
+                                <strong>Data Center Trends</strong>
+                                <p>Precision server rack management, thermal optimization, and cable grooming.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
 
-            <section className={styles.section}>
-                <h2>Maximize Productivity</h2>
-                <p>
-                    Don't let slow internet or network downtime hold you back. Our professional installation ensures that your network operates at peak performance, minimizing latency and maximizing throughput for all your devices.
-                </p>
-            </section>
+                <section className={styles.section}>
+                    <h2>Operational Efficiency</h2>
+                    <p>
+                        Eliminate bottlenecks and ensure unwavering uptime. Our professionally commissioned networks utilize advanced load balancing and redundancy protocols to maintain peak throughput, ensuring your team remains connected and productive without interruption.
+                    </p>
+                </section>
 
-            <div className={styles.cta}>
-                <h3>Upgrade Your Network Today</h3>
-                <p>Let's discuss your infrastructure needs.</p>
-                <Link href="/contact" className={styles.button}>
-                    Contact Us
-                </Link>
+                <div className={styles.cta}>
+                    <h3>Upgrade Your Network Today</h3>
+                    <p>Let's discuss your infrastructure needs.</p>
+                    <Link href="/contact" className={styles.button}>
+                        Contact Us
+                    </Link>
+                </div>
             </div>
         </div>
     );

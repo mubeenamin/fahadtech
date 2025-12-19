@@ -1,0 +1,77 @@
+.marqueeContainer {
+    padding: 4rem 0;
+    background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.brandCard {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    /* Square with rounded corners */
+    width: 140px;
+    /* Slightly wider */
+    height: 100px;
+    /* Rectangular shape often fits logos better */
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.brandCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(139, 107, 62, 0.15);
+}
+
+.logoImage {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+    /* Moderate white shadow */
+    transition: all 0.3s ease;
+}
+
+.brandCard:hover .logoImage {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+    /* Stronger glow on hover */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.track:hover {
+    animation-play-state: paused;
+}

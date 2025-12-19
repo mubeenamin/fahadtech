@@ -6,7 +6,7 @@
 
 .title {
     font-size: 3rem;
-    color: var(--primary);
+    color: var(--white);
     margin-bottom: 1.5rem;
     font-weight: 800;
 }
@@ -22,7 +22,7 @@
 }
 
 .section h2 {
-    color: var(--primary);
+    color: var(--white);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -30,7 +30,7 @@
 .section p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: var(--primary-light);
+    color: var(--muted);
     line-height: 1.7;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .listItem {
-    background-color: var(--white);
+    background-color: var(--section-bg);
     border: 1px solid var(--border);
     padding: 1.5rem;
     border-radius: 8px;
@@ -53,17 +53,19 @@
 }
 
 .check {
-    color: var(--secondary);
+    color: var(--accent);
     font-weight: bold;
 }
 
 .cta {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--card-bg);
+    color: var(--foreground);
     padding: 3rem;
     border-radius: 12px;
     text-align: center;
     margin-top: 4rem;
+    border: 1px solid var(--primary);
+    /* Gold border is acceptable as highlight */
 }
 
 .cta h3 {
@@ -78,7 +80,7 @@
 }
 
 .button {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--white);
     padding: 1rem 2.5rem;
     border-radius: 6px;
@@ -89,5 +91,5 @@
 }
 
 .button:hover {
-    background-color: #0284c7;
+    background-color: var(--primary-hover);
 }
